@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <div class="spotify-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <i class='bx bxl-spotify'></i> Spotify
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#"><i class='bx bxs-home'></i> Home</a></li>
+                    <li><a href="#"><i class='bx bx-search'></i> Search</a></li>
+                    <li><a href="#"><i class='bx bx-library'></i> Your Library</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-playlists">
+                <p><i class='bx bxs-plus-square'></i> Create Playlist</p>
+                <p><i class='bx bxs-heart-square'></i> Liked Songs</p>
+            </div>
+        </aside>
+
+        
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-nav">
+                    <button class="nav-btn"><i class='bx bx-chevron-left'></i></button>
+                    <button class="nav-btn"><i class='bx bx-chevron-right'></i></button>
+                </div>
+                <div class="header-user">
+                    <button class="user-btn">Explore Premium</button>
+                    <button class="user-btn install-btn"><i class='bx bx-down-arrow-circle'></i> Install App</button>
+                    <div class="user-profile"><i class='bx bxs-user'></i></div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <h2>Good Afternoon</h2>
+                <div class="cards-container">
+                    
+                    <div class="card">
+                        <img src="assets/images/cover1.png" alt="Album Art">
+                        <p>Song Title</p>
+                    </div>
+                     <div class="card">
+                        <img src="assets/images/cover2.png" alt="Album Art">
+                        <p>Another Song</p>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+        
+        <footer class="music-player">
+            <div class="song-info">
+                <img id="current-song-cover" src="assets/images/cover1.png" alt="Current Song">
+                <div class="song-details">
+                    <span id="current-song-title">Song Title</span>
+                    <span id="current-song-artist">Artist Name</span>
+                </div>
+                <i class='bx bx-heart'></i>
+            </div>
+
+            <div class="player-controls">
+                <div class="control-buttons">
+                    <button id="prev-btn"><i class='bx bx-skip-previous'></i></button>
+                    <button id="play-pause-btn"><i class='bx bx-play'></i></button>
+                    <button id="next-btn"><i class='bx bx-skip-next'></i></button>
+                </div>
+                <div class="progress-area">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar-wrapper">
+                        <div id="progress-bar"></div>
+                    </div>
+                    <span id="total-duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="volume-controls">
+                <i class='bx bx-volume-full'></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+            </div>
+        </footer>
+    </div>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
